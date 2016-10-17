@@ -103,7 +103,10 @@ final class BooksControllerLoginTask implements Runnable,
     URI auth_uri = this.config.getCurrentRootFeedURI();
     final HTTPResultType<InputStream> r;
     if (this.adobe_drm.isSome()) {
-      auth_uri = this.config.getAdobeAuthURI().resolve("vendorid/authdata.php");
+      // Datalogics doesn't authenticate with authData, but we still need a 200 response here.
+      // Ideally, we would do a credential check here and return either 200 or 403 before
+      // sending the user info to Adobe.
+      auth_uri = this.config.getAdobeAuthURI().resolve("AdobeAuth/Status");
       r = this.http.get(Option.some(auth), auth_uri, 0);
     } else {
       r = this.http.head(Option.some(auth), auth_uri);

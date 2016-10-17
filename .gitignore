@@ -3,6 +3,7 @@
 .idea/workspace.xml
 .project
 .settings
+.DS_Store
 ReaderClientCert.sig
 gen
 helpstack.conf

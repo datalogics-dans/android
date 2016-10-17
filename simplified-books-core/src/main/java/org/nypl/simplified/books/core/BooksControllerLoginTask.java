@@ -103,7 +103,7 @@ final class BooksControllerLoginTask implements Runnable,
     URI auth_uri = this.config.getCurrentRootFeedURI();
     final HTTPResultType<InputStream> r;
     if (this.adobe_drm.isSome()) {
-      auth_uri = this.config.getAdobeAuthURI().resolve("AdobeAuth/authdata");
+      auth_uri = this.config.getAdobeAuthURI().resolve("vendorid/authdata.php");
       r = this.http.get(Option.some(auth), auth_uri, 0);
     } else {
       r = this.http.head(Option.some(auth), auth_uri);

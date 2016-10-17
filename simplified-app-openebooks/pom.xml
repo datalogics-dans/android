@@ -53,6 +53,7 @@
     <profile>
       <id>nypl-drm-adobe</id>
       <build>
+      <finalName>${project.artifactId}</finalName>
         <plugins>
           <!-- If DRM is enabled, the certificate must exist. -->
           <plugin>

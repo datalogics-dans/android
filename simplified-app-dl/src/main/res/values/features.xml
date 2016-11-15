@@ -2,7 +2,7 @@
 <resources>
 
   <!-- The configurable application name -->
-  <string name="feature_app_name">DL Library Simplified</string>
+  <string name="feature_app_name">DLNSPL</string>
 
   <!-- The configurable application icon -->
   <!-- <drawable name="feature_app_icon">@drawable/dl_reader_google_play_bookstore_thumbnail</drawable> -->
@@ -15,7 +15,7 @@
   <color name="feature_main_color">#004990</color>
 
   <!-- The configurable secondary color, used for branding. -->
-  <color name="feature_secondary_color">#f36e21</color>
+  <color name="feature_secondary_color">#2c373d</color>
 
   <!-- If true, a Holds tab is shown. -->
   <!-- This can be disabled for book collections that do not have holds. -->

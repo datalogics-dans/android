@@ -15,6 +15,7 @@
   <url>https://github.com/NYPL/Simplified-Android</url>
 
   <modules>
+    <module>simplified-app-dl</module>
     <module>simplified-app-openebooks</module>
     <module>simplified-app-shared</module>
     <module>simplified-app-simplye</module>

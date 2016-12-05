@@ -2,19 +2,19 @@
 <resources>
 
   <!-- The configurable application name -->
-  <string name="feature_app_name">NYPL Simply\uFEFFE</string>
+  <string name="feature_app_name">DLNSPL</string>
 
   <!-- The configurable application icon -->
-  <drawable name="feature_app_icon">@drawable/nypl</drawable>
+  <drawable name="feature_app_icon">@drawable/dl_icon</drawable>
 
   <!-- The configurable splash screen image -->
-  <drawable name="feature_app_splash">@drawable/nypl_splash</drawable>
+  <drawable name="feature_app_splash">@drawable/dl_splash</drawable>
 
   <!-- The configurable main color, used for branding. -->
-  <color name="feature_main_color">#cc1a16</color>
+  <color name="feature_main_color">#004990</color>
 
   <!-- The configurable secondary color, used for branding. -->
-  <color name="feature_secondary_color">#af1a16</color>
+  <color name="feature_secondary_color">#2c373d</color>
 
   <!-- If true, a Holds tab is shown. -->
   <!-- This can be disabled for book collections that do not have holds. -->
@@ -27,7 +27,7 @@
   <!-- default authentication provider -->
   <bool name="feature_default_auth_provider">true</bool>
   <string name="feature_default_auth_provider_name">Datalogics</string>
-  <string name="feature_default_auth_provider_uri">http://acswin.datalogics.com:8090/</string>
+  <string name="feature_default_auth_provider_uri">http://35.163.120.42/</string>
   <bool name="feature_default_auth_provider_request_new_code">false</bool>
   <string name="feature_default_auth_provider_request_new_code_uri"> </string>
 
@@ -35,8 +35,8 @@
   <bool name="feature_auth_provider_clever">false</bool>
 
   <!-- The initial catalog URI that will be loaded on program start -->
-  <string name="feature_catalog_start_uri">http://nypl.datalogics.com/</string>
-  <string name="feature_adobe_auth_uri">http://acswin.datalogics.com:8090/</string>
+  <string name="feature_catalog_start_uri">http://35.163.120.42/</string>
+  <string name="feature_adobe_auth_uri">http://35.163.120.42/</string>
 
   <!-- The initial catalog loans URI that will be used to sync accounts -->
   <string name="feature_catalog_loans_uri_component">loans/</string>
@@ -44,6 +44,6 @@
   <!-- A non-empty string here will override the package name given to
        the Adobe DRM implementation. An empty string will cause the
        implementation to use the package name defined in the Android manifest. -->
-  <string name="feature_adobe_package_override">org.nypl.simplified.app</string>
+  <string name="feature_adobe_package_override">dev.org.nypl.simplified</string>
 
 </resources>

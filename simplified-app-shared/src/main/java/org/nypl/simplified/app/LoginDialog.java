@@ -189,8 +189,14 @@ public final class LoginDialog extends DialogFragment
 
     final Resources rr = NullCheck.notNull(this.getResources());
     final OptionType<Throwable> none = Option.none();
-    this.onAccountLoginFailure(
-      none, rr.getString(R.string.settings_login_failed_server));
+    if (code == 403) {
+      this.onAccountLoginFailure(
+              none, rr.getString(R.string.settings_login_failed_credentials));
+    }
+    else {
+      this.onAccountLoginFailure(
+              none, rr.getString(R.string.settings_login_failed_server));
+    }
   }
 
   @Override public void onAccountLoginFailureLocalError(

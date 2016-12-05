@@ -74,20 +74,11 @@ public class BooksControllerDeviceActivationTask implements Runnable,
                 public void executeWith(final AdobeAdeptConnectorType c) {
                   c.discardDeviceActivations();
 
-                  //check if clever active
-                  if (adobe_token.isNone()) {
-                    c.activateDevice(
-                      BooksControllerDeviceActivationTask.this,
-                      s.get(),
-                      user.toString(),
-                      pass.toString());
-                  } else {
-                    c.activateDevice(
-                      BooksControllerDeviceActivationTask.this,
-                      s.get(),
-                      ((Some<AccountAdobeToken>) adobe_token).get().toString(),
-                      "");
-                  }
+                  c.activateDevice(
+                          BooksControllerDeviceActivationTask.this,
+                          s.get(),
+                          user.toString(),
+                          pass.toString());
                 }
               });
             return Unit.unit();

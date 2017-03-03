@@ -87,11 +87,10 @@ public class BooksControllerDeviceActivationTask implements Runnable,
     }
   }
 
-  @Override
   public void onActivation(
     final int index,
     final AdobeVendorID authority,
-    final String device_id,
+    final AdobeDeviceID device_id,
     final String user_name,
     final AdobeUserID user_id,
     final String expires) {
@@ -107,7 +106,7 @@ public class BooksControllerDeviceActivationTask implements Runnable,
       "Activation [{}]: expires: {}", Integer.valueOf(index), expires);
 
     BooksControllerDeviceActivationTask.this.credentials.setAdobeUserID(Option.some(user_id));
-    BooksControllerDeviceActivationTask.this.credentials.setAdobeDeviceID(Option.some(new AdobeDeviceID(device_id)));
+    BooksControllerDeviceActivationTask.this.credentials.setAdobeDeviceID(Option.some(device_id));
 
     try {
       this.accounts_database.accountSetCredentials(this.credentials);
